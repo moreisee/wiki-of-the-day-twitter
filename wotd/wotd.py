@@ -13,7 +13,6 @@ def main():
     if len(post_len) > 110:
         title, summary = reduce_length(title, summary)
         post = title + "\n" + summary + '\n' +  url
-    #print(post)
     twitter_post(post)
     
 
@@ -33,7 +32,6 @@ def twitter_post(post_data):
 
     status = api.PostUpdate(post_data)
     print(status.text)
-    #print(len(status.text))
 
 def reduce_length(title, summary):
     if len(title) > 110:
